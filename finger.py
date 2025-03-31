@@ -5,10 +5,8 @@ import mediapipe as mp
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 hands = mp_hands.Hands(static_image_mode=False, max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5)
-
 # Open webcam
 cap = cv2.VideoCapture(0)
-
 def count_fingers(hand_landmarks):
     finger_tips = [8, 12, 16, 20]  # Index, Middle, Ring, Pinky
     fingers_up = 0
